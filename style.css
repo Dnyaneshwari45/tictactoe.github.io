@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    background-color:rgb(104, 7, 63);
+    color:white;
+    height:40px;
+    font-size: 27px;
+    display:flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding:12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.game-container{
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns:repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.box{
+    border:2px solid black;
+    font-size: 7vw;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+   background-color: rgb(204, 202, 181);
+}
+
+.game-info{
+    padding: 0 34px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.info{
+    font-size: 25px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    color: #c85000;
+    font-weight: bold;
+    /* padding-right: 52px; */
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left:0;
+}
+
+.bt-0{
+    border-top:0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+/* .line{
+    background-color: black;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: #fb8332;
+    transition: width 1s ease-in-out;
+} */
+
+.reset {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 2rem;
+    padding: calc(.675rem - 1px) calc(0.8rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+  
+  .reset:hover,
+  .reset:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  
+  .reset:hover {
+    transform: translateY(-1px);
+  }
+  
+  .reset:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+  }
+
+  @media screen and (max-width: 950px)
+  {
+      .game-container{
+          flex-wrap: wrap;
+      }
+      .game-info{
+        margin-top: 34px;
+      }
+      .game-info h1{
+          font-size: 1.5rem;
+      }
+      .container{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns:repeat(3, 20vw);
+    }
+  }
